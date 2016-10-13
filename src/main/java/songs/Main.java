@@ -14,8 +14,8 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         TopXService service = context.getBean(TopXService.class);
         JavaSparkContext sc = context.getBean(JavaSparkContext.class);
-        JavaRDD<String> rdd = sc.textFile("data/songs/beatles/*");
-        Thread.sleep(50000);
-        service.topX(rdd,3).forEach(System.out::println);
+        JavaRDD<String> rdd = null;
+        rdd = sc.textFile("data/songs/beatles/*");
+        service.topX(rdd, 3).forEach(System.out::println);
     }
 }

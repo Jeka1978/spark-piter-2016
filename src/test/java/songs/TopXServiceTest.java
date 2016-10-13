@@ -32,7 +32,7 @@ public class TopXServiceTest {
 
     @Test
     public void topX() throws Exception {
-        JavaRDD<String> rdd = sc.parallelize(Arrays.asList("java", "java", "scala"));
+        JavaRDD<String> rdd = sc.parallelize(Arrays.asList("java", "java", "scala","i","i","i"));
         Assert.assertEquals("java",topXService.topX(rdd,1).get(0));
     }
 
