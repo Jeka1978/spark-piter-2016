@@ -2,14 +2,13 @@ package songs;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by Evegeny on 20/04/2016.
  */
 public class WordsUtil {
-    public static Iterator<String> getWords(String text) {
+    public static List<String> getWords(String text) {
         List<String> words = new ArrayList<>();
         BreakIterator breakIterator = BreakIterator.getWordInstance();
         breakIterator.setText(text);
@@ -22,6 +21,6 @@ public class WordsUtil {
             }
         }
 
-        return words.iterator();
+        return words;
     }
 }

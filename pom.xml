@@ -11,7 +11,7 @@
 
     <properties>
         <scalaVersion>2.10.4</scalaVersion>
-        <sparkVersion>2.0.1</sparkVersion>
+        <sparkVersion>1.6.1</sparkVersion>
         <spring.version>4.3.1.RELEASE</spring.version>
     </properties>
 
@@ -23,12 +23,12 @@
             <version>1.16.8</version>
         </dependency>
 
-      <!--  <dependency>
+        <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-hive_2.10</artifactId>
             <version>${sparkVersion}</version>
         </dependency>
--->
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
